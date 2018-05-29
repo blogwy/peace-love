@@ -1,0 +1,358 @@
+
+
+/*
+peace&love.css 由blogwy维护
+
+作者GitHub：https://github.com/blogwy
+
+作者个人博客：https://www.blogwy.com
+
+本项目GitHub开源，欢迎热心网友修改源码，无需注明出处。
+*/
+
+
+
+
+/*样式重置*/
+html {
+  font-family: Arial, Helvetica, STHeiTi, sans-serif;
+}
+
+html,
+body,
+header,
+section,
+footer,
+div,
+ul,
+ol,
+li,
+img,
+a,
+span,
+em,
+del,
+legend,
+center,
+strong,
+var,
+fieldset,
+form,
+label,
+dl,
+dt,
+dd,
+cite,
+input,
+hr,
+time,
+mark,
+code,
+figcaption,
+figure,
+textarea,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+  color: #323232
+}
+
+html,
+body {
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  background-color: #fff;
+}
+
+nav,
+article,
+aside,
+details,
+main,
+header,
+footer,
+section,
+fieldset,
+figcaption,
+figure {
+  display: block;
+}
+
+img,
+a,
+button,
+em,
+del,
+strong,
+var,
+label,
+cite,
+small,
+time,
+mark,
+code,
+textarea {
+  display: inline-block;
+}
+
+header,
+section,
+footer {
+  position: relative;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1em;
+  -webkit-appearance: none;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+span {
+  display: inline-block;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+/*字体*/
+body, button, input, select, textarea {
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/*flex布局*/
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-1{
+  flex: none;
+  width: 8.33333%;
+}
+.flex-2{
+  flex: none;
+  width: 16.66667%;
+}
+.flex-3{
+  flex: none;
+  width: 25%;
+}
+.flex-4{
+  flex: none;
+  width: 33.33333%;
+}
+.flex-5{
+  flex: none;
+  width: 41.66667%;
+}
+.flex-6{
+  flex: none;
+  width: 50%;
+}
+.flex-7{
+  flex: none;
+  width: 58.33333%;
+}
+.flex-8{
+  flex: none;
+  width: 66.66667%;
+}
+.flex-9{
+  flex: none;
+  width: 75%;
+}
+.flex-10{
+  flex: none;
+  width: 83.33333%;
+}
+.flex-11{
+  flex: none;
+  width: 91.66667%;
+}
+.flex-12{
+  flex: none;
+  width: 100%;
+}
+
+.offset-1{
+  margin-left: 8.33333%;
+}
+.offset-2{
+  margin-left: 16.66667%;
+}
+.offset-3{
+  margin-left: 25%;
+}
+.offset-4{
+  margin-left: 33.33333%;
+}
+.offset-5{
+  margin-left: 41.66667%;
+}
+.offset-6{
+  margin-left: 50%;
+}
+.offset-7{
+  margin-left: 58.33333%;
+}
+.offset-8{
+  margin-left: 66.66667%;
+}
+.offset-9{
+  margin-left: 75%;
+}
+.offset-10{
+  margin-left: 83.33333%;
+}
+.offset-11{
+  margin-left: 91.66667%;
+}
+.offset-12{
+  margin-left: 100%;
+}
+
+/*文本对齐方式*/
+
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+/*表单样式*/
+.input{
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1em;
+  height: 2.25em;
+  justify-content: flex-start;
+  padding: .375em .625em;
+  position: relative;
+  vertical-align: top;
+}
+
+.input,.textarea{
+  box-sizing: border-box;
+  background-color: #fff;
+  border-color: #dbdbdb;
+  color: #363636;
+  box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+  max-width: 100%;
+  width: 100%;
+}
+.input:focus,.input:active{
+  border-color: #209cee;
+  box-shadow: 0 0 0 0.125em rgba(32,156,238,.25);
+}
+.input.is-rounded{
+  border-radius: 290486px;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.is-primary:focus{
+  border-color: #00d1b2;
+  box-shadow: 0 0 0 0.125em rgba(0,209,178,.25);
+}
+.is-success:focus{
+  border-color: #23d160;
+  box-shadow: 0 0 0 0.125em rgba(35,209,96,.25);
+}
+.is-warning:focus{
+  border-color: #ffdd57;
+  box-shadow: 0 0 0 0.125em rgba(255,221,87,.25);
+}
+.is-danger:focus{
+  border-color: #ff3860;
+  box-shadow: 0 0 0 0.125em rgba(255,56,96,.25);
+}
+.is-small{
+  font-size: .75em;
+}
+.is-medium{
+  font-size: 1.25em;
+}
+.is-large{
+  font-size: 1.5em;
+}
+
+.input[disabled], .textarea[disabled] {
+  background-color: #f5f5f5;
+  border-color: #f5f5f5;
+  box-shadow: none;
+  color: #7a7a7a;
+}
+.input[disabled]{
+  cursor: not-allowed;
+}
+.icon-input-item{
+  position: relative;
+}
+.icon-input-left .input{
+  padding-left: 2.25em;
+}
+.icon-input-right .input{
+  padding-right: 2.25em;
+}
+.icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.25em;
+  width: 2.25em;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+  color: #dbdbdb;
+  pointer-events: none;
+}
+.icon-is-left{
+  left: 0;
+}
+.icon-is-right{
+  right: 0;
+}
+.input:focus ~ .icon{
+  color: #7a7a7a;
+}
