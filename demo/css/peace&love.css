@@ -374,6 +374,7 @@ body, button, input, select, textarea {
 }
 /*input和textarea ---end---*/
 
+/*select*/
 .select {
   display: inline-block;
   max-width: 100%;
@@ -427,4 +428,86 @@ body, button, input, select, textarea {
 .select:not(.is-multiple):hover::after{
   border-color: #363636;
 }
+/*select ---end---*/
 
+/*checkbox和radio*/
+.radio-lab,.checkbox-lab{
+  display: inline-block;
+  position: relative;
+}
+.radio,.checkbox{
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  opacity: 0;
+  -webkit-appearance: none;
+}
+.radio-icon-rounded,.checkbox-icon-rounded{
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 100%;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  line-height: 1;
+}
+.radio:checked + .radio-icon-rounded:after,
+.checkbox:checked + .checkbox-icon-rounded:after{
+  background-color: #209cee;
+  border-radius: 100%;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  margin: 2px;
+  width: 12px;
+}
+
+.radio-icon-square,.checkbox-icon-square{
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 0%;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
+  line-height: 1;
+
+}
+.radio:checked + .radio-icon-square:after,
+.checkbox:checked + .checkbox-icon-square:after{
+  background-color: #209cee;
+  border-radius: 0%;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  margin: 2px;
+  width: 12px;
+}
+.filling-primary:checked + .radio-icon-square:after,
+.filling-primary:checked + .checkbox-icon-square:after,
+.filling-primary:checked + .radio-icon-rounded:after,
+.filling-primary:checked + .checkbox-icon-rounded:after{
+  background: #00d1b2;
+}
+.filling-success:checked + .radio-icon-square:after,
+.filling-success:checked + .checkbox-icon-square:after,
+.filling-success:checked + .radio-icon-rounded:after,
+.filling-success:checked + .checkbox-icon-rounded:after{
+  background: #23d160;
+}
+.filling-warning:checked + .radio-icon-square:after,
+.filling-warning:checked + .checkbox-icon-square:after,
+.filling-warning:checked + .radio-icon-rounded:after,
+.filling-warning:checked + .checkbox-icon-rounded:after{
+  background: #ffdd57;
+}
+.filling-danger:checked + .radio-icon-square:after,
+.filling-danger:checked + .checkbox-icon-square:after,
+.filling-danger:checked + .radio-icon-rounded:after,
+.filling-danger:checked + .checkbox-icon-rounded:after{
+  background: #ff3860;
+}
+/*checkbox和radio ---end---*/
+
+/*button*/
