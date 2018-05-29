@@ -6,40 +6,100 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Title</title>
-  <link rel="stylesheet" href="./css/peace&love.css">
-  <script src="./js/font-awesome5.0.13.js"></script>
+  <link rel="stylesheet" href="print.css">
+  <style>
+  </style>
 </head>
 <body>
-  <div class="flex" style="height: 200px;margin-top: 20px">
-    <div class="flex-2">flex-2</div>
-    <div class="flex-8 flex">
-      <div class="flex-3">flex-3</div>
-      <div class="flex-5">
-        <input type="text" class="input">
-      </div>
-      <div class="flex-4">
-        <input type="text" class="input" placeholder="正常大小">
-        <input type="text" class="input is-primary is-small" placeholder="小" style="margin-top: 10px">
-        <input type="text" class="input is-success is-medium" placeholder="中" style="margin-top: 10px">
-        <input type="text" class="input is-warning is-large" placeholder="大" style="margin-top: 10px">
-        <input type="text" class="input is-danger is-large" placeholder="大" style="margin-top: 10px">
-        <input type="text" class="input is-danger" placeholder="禁止样式" disabled style="margin-top: 10px">
-      </div>
-      <div class="flex-6">
-        <div class="icon-input-item icon-input-left icon-input-right">
-          <input type="text" class="input">
-          <span class="icon icon-is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon icon-is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </div>
-        
-      </div>
+  <div>
+    <h1>测试标题测试标题测试标题测试标题</h1>
+	  <div id="odiv">
+      <button id="post">post提交</button>
+      <button id="get">get提交</button>
+      <button id="get1">get提交(不过滤)</button>
+      <button id="get2">get提交(下载)</button>
     </div>
-    <div class="flex-2">flex-2</div>
-    
+    <div id="odiv1"></div>
   </div>
 </body>
+<script src="./js/jq.js"></script>
+<script src="./js/filter.js"></script>
+<script>
+  
+  
+  var dataFilters = function (data,type) {
+    console.log(data);
+    console.log(type);
+    var resdata = JSON.parse(data);
+    console.log(resdata);
+    if (resdata.result.code === '101'){
+      window.location.href = '/'
+    }
+    return data;
+  };
+
+  $('#post').on('click',function () {
+    $.ajax({
+      url: '/test/post',
+      type: 'POST',
+      data: {
+        'name': 'wy'
+      },
+      dataType: 'json',
+//      dataFilter: dataFilters,
+      success: function (res) {
+        console.log(res);
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    })
+  })
+
+  $('#get').on('click',function () {
+    $.ajax({
+      url: '/test/get',
+      type: 'GET',
+      data: 'name=wy&sex=man',
+      dataType: 'json',
+      success: function (res) {
+        console.log(res);
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    })
+  })
+
+  //Date.prototype.Format = function(formatStr)
+  //{
+  //    var str = formatStr;
+  //    var Week = ['日','一','二','三','四','五','六'];
+  //
+  //    str=str.replace(/yyyy|YYYY/,this.getFullYear());
+  //    str=str.replace(/yy|YY/,(this.getYear() % 100)>9?(this.getYear() % 100).toString():'0' + (this.getYear() % 100));
+  //
+  //    str=str.replace(/MM/,this.getMonth()>9?this.getMonth().toString():'0' + this.getMonth());
+  //    str=str.replace(/M/g,this.getMonth());
+  //
+  //    str=str.replace(/w|W/g,Week[this.getDay()]);
+  //
+  //    str=str.replace(/dd|DD/,this.getDate()>9?this.getDate().toString():'0' + this.getDate());
+  //    str=str.replace(/d|D/g,this.getDate());
+  //
+  //    str=str.replace(/hh|HH/,this.getHours()>9?this.getHours().toString():'0' + this.getHours());
+  //    str=str.replace(/h|H/g,this.getHours());
+  //    str=str.replace(/mm/,this.getMinutes()>9?this.getMinutes().toString():'0' + this.getMinutes());
+  //    str=str.replace(/m/g,this.getMinutes());
+  //
+  //    str=str.replace(/ss|SS/,this.getSeconds()>9?this.getSeconds().toString():'0' + this.getSeconds());
+  //    str=str.replace(/s|S/g,this.getSeconds());
+  //
+  //    return str;
+  //}
+  // var today =new Date().Format('YYYY年MM月DD日 星期W HH:mm:ss');
+  // // var time = today.Format('YYYY-MM-DD HH:mm:ss');
+  // d
+  // console.log(today);
+</script>
 </html>

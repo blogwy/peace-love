@@ -257,7 +257,9 @@ body, button, input, select, textarea {
 }
 
 /*表单样式*/
-.input{
+
+/*input和textarea*/
+.input,.textarea,.select select{
   -webkit-appearance: none;
   align-items: center;
   border: 1px solid transparent;
@@ -271,7 +273,6 @@ body, button, input, select, textarea {
   position: relative;
   vertical-align: top;
 }
-
 .input,.textarea{
   box-sizing: border-box;
   background-color: #fff;
@@ -281,7 +282,8 @@ body, button, input, select, textarea {
   max-width: 100%;
   width: 100%;
 }
-.input:focus,.input:active{
+
+.input:focus,.input:active,.textarea:focus,.textarea:active,.select select:focus,.select select:active{
   border-color: #209cee;
   box-shadow: 0 0 0 0.125em rgba(32,156,238,.25);
 }
@@ -291,29 +293,30 @@ body, button, input, select, textarea {
   padding-right: 1em;
 }
 
-.is-primary:focus{
+/*focus后的样式和字体大小input,textarea,select可以共用*/
+.is-primary:focus,.is-primary > select:focus{
   border-color: #00d1b2;
   box-shadow: 0 0 0 0.125em rgba(0,209,178,.25);
 }
-.is-success:focus{
+.is-success:focus,.is-success > select:focus{
   border-color: #23d160;
   box-shadow: 0 0 0 0.125em rgba(35,209,96,.25);
 }
-.is-warning:focus{
+.is-warning:focus,.is-warning > select:focus{
   border-color: #ffdd57;
   box-shadow: 0 0 0 0.125em rgba(255,221,87,.25);
 }
-.is-danger:focus{
+.is-danger:focus,.is-danger > select:focus{
   border-color: #ff3860;
   box-shadow: 0 0 0 0.125em rgba(255,56,96,.25);
 }
-.is-small{
+.is-small,.is-small > select,.select.is-small~.icon{
   font-size: .75em;
 }
-.is-medium{
+.is-medium,.is-medium > select,.select.is-medium~.icon{
   font-size: 1.25em;
 }
-.is-large{
+.is-large,.is-large > select,.select.is-large~.icon{
   font-size: 1.5em;
 }
 
@@ -322,14 +325,12 @@ body, button, input, select, textarea {
   border-color: #f5f5f5;
   box-shadow: none;
   color: #7a7a7a;
-}
-.input[disabled]{
   cursor: not-allowed;
 }
-.icon-input-item{
+.icon-input-item,.icon-select-item{
   position: relative;
 }
-.icon-input-left .input{
+.icon-input-left .input,.icon-select-left select{
   padding-left: 2.25em;
 }
 .icon-input-right .input{
@@ -339,7 +340,7 @@ body, button, input, select, textarea {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 2.25em;
+  height: 100%;
   width: 2.25em;
   position: absolute;
   top: 0;
@@ -356,3 +357,74 @@ body, button, input, select, textarea {
 .input:focus ~ .icon{
   color: #7a7a7a;
 }
+
+.textarea{
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  padding: .625em;
+  resize: vertical;
+}
+.textarea:not([rows]) {
+  max-height: 600px;
+  min-height: 120px;
+}
+.textarea[rows] {
+  height: initial;
+}
+/*input和textarea ---end---*/
+
+.select {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+  vertical-align: top;
+}
+.select:not(.is-multiple) {
+  height: 2.25em;
+}
+.select select:not([multiple]) {
+  padding-right: 2.5em;
+}
+.select select {
+  background-color: #fff;
+  border-color: #dbdbdb;
+  color: #363636;
+  cursor: pointer;
+  display: block;
+  font-size: 1em;
+  max-width: 100%;
+  outline: 0;
+}
+
+.select:not(.is-multiple)::after {
+  box-sizing: inherit;
+  border: 2.5px solid transparent;
+  border-radius: 2px;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  display: block;
+  height: 0.6em;
+  margin-top: -0.4375em;
+  pointer-events: none;
+  position: absolute;
+  top: 47%;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  width: 0.6em;
+}
+.select:not(.is-multiple)::after{
+  border-color: #3273dc;
+  right: 1em;
+  z-index: 4;
+}
+.select select:hover {
+  border-color: #b5b5b5;
+}
+.select:not(.is-multiple):hover::after{
+  border-color: #363636;
+}
+
