@@ -118,7 +118,8 @@ ul {
 
 input,
 button,
-textarea {
+textarea,
+a{
   border: 0;
   margin: 0;
   padding: 0;
@@ -259,7 +260,7 @@ body, button, input, select, textarea {
 /*表单样式*/
 
 /*input和textarea*/
-.input,.textarea,.select select{
+.input,.textarea,.button,.select select{
   -webkit-appearance: none;
   align-items: center;
   border: 1px solid transparent;
@@ -275,9 +276,9 @@ body, button, input, select, textarea {
 }
 .input,.textarea{
   box-sizing: border-box;
-  background-color: #fff;
-  border-color: #dbdbdb;
-  color: #363636;
+  background-color: #fff!important;
+  border-color: #dbdbdb!important;
+  color: #363636!important;
   box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
   max-width: 100%;
   width: 100%;
@@ -287,7 +288,7 @@ body, button, input, select, textarea {
   border-color: #209cee;
   box-shadow: 0 0 0 0.125em rgba(32,156,238,.25);
 }
-.input.is-rounded{
+.input.is-rounded,.button.is-rounded{
   border-radius: 290486px;
   padding-left: 1em;
   padding-right: 1em;
@@ -311,6 +312,7 @@ body, button, input, select, textarea {
   box-shadow: 0 0 0 0.125em rgba(255,56,96,.25);
 }
 .is-small,.is-small > select,.select.is-small~.icon{
+  border-radius: 2px;
   font-size: .75em;
 }
 .is-medium,.is-medium > select,.select.is-medium~.icon{
@@ -418,7 +420,7 @@ body, button, input, select, textarea {
   width: 0.6em;
 }
 .select:not(.is-multiple)::after{
-  border-color: #3273dc;
+  border-color: rgba(50, 115, 220, 0.7);
   right: 1em;
   z-index: 4;
 }
@@ -440,6 +442,7 @@ body, button, input, select, textarea {
   height: 18px;
   position: absolute;
   opacity: 0;
+  cursor: pointer;
   -webkit-appearance: none;
 }
 .radio-icon-rounded,.checkbox-icon-rounded{
@@ -511,3 +514,227 @@ body, button, input, select, textarea {
 /*checkbox和radio ---end---*/
 
 /*button*/
+.button{
+  box-sizing: border-box;
+  background-color: #fff;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(.375em - 1px);
+  padding-left: .75em;
+  padding-right: .75em;
+  padding-top: calc(.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+.button.is-hovered, .button:hover {
+  border-color: #b5b5b5;
+  color: #363636;
+}
+.button.is-active, .button:active {
+  border-color: #4a4a4a;
+  color: #363636;
+}
+
+.is-primary{
+  background-color: #00d1b2;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-primary:hover {
+  background-color: #00c4a7;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-primary:active {
+  background-color: #00b89c;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-primary.is-outline {
+  background-color: transparent;
+  border-color: #00d1b2;
+  color: #00d1b2;
+}
+.button.is-primary.is-outline:focus,
+.button.is-primary.is-outline:hover{
+  background-color: #00d1b2;
+  border-color: #00d1b2;
+  color: #fff;
+}
+
+.is-warning{
+  background-color: #ffdb4a;
+  border-color: transparent;
+  color: #363636;
+}
+.button.is-warning:hover {
+  background-color: #ffd83d;
+  border-color: transparent;
+  color: #363636;
+}
+.button.is-warning:active {
+  background-color: #f1cd3f;
+  border-color: transparent;
+  color: #363636;
+}
+.button.is-warning.is-outline {
+  background-color: transparent;
+  border-color: #ffdb4a;
+  color: #ffdb4a;
+}
+.button.is-warning.is-outline:focus,
+.button.is-warning.is-outline:hover{
+  background-color: #ffdb4a;
+  border-color: #ffdb4a;
+  color: #363636;
+}
+
+.is-success{
+  background-color: #23d160;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-success:hover {
+  background-color: #22c65b;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-success:active {
+  background-color: #20bc56;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-success.is-outline {
+  background-color: transparent;
+  border-color: #23d160;
+  color: #23d160;
+}
+.button.is-success.is-outline:focus,
+.button.is-success.is-outline:hover{
+  background-color: #23d160;
+  border-color: #23d160;
+  color: #fff;
+}
+
+.is-danger{
+  background-color: #ff3860;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-danger:hover {
+  background-color: #e53457;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-danger:active {
+  background-color: #d43051;
+  border-color: transparent;
+  color: #fff;
+}
+.button.is-danger.is-outline {
+  background-color: transparent;
+  border-color: #ff3860;
+  color: #ff3860;
+}
+.button.is-danger.is-outline:focus,
+.button.is-danger.is-outline:hover{
+  background-color: #ff3860;
+  border-color: #ff3860;
+  color: #fff;
+}
+.btn-icon{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #dbdbdb;
+  pointer-events: none;
+}
+.button .btn-icon:first-child:not(:last-child){
+  padding-right: 0.6em;
+}
+.button .btn-icon:last-child:not(:first-child){
+  padding-left: 0.6em;
+}
+/*按钮---end---*/
+/*圆形删除按钮*/
+.button-delete{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(10,10,10,.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: 0;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+  user-select: none;
+}
+.button-delete::before,.button-delete::after{
+  box-sizing: inherit;
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+.button-delete::after{
+  height: 50%;
+  width: 2px;
+}
+.button-delete::before{
+  height: 2px;
+  width: 50%;
+}
+.button-delete:hover{
+  background-color: rgba(10,10,10,.3);
+}
+.button-delete:active{
+  background-color: rgba(10,10,10,.4);
+}
+.button-delete.is-small{
+  height: 16px;
+  max-height: 16px;
+  max-width: 16px;
+  min-height: 16px;
+  min-width: 16px;
+  width: 16px;
+}
+.button-delete.is-medium{
+  height: 24px;
+  max-height: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+  width: 24px;
+}
+.button-delete.is-large{
+  height: 32px;
+  max-height: 32px;
+  max-width: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  width: 32px;
+}
+/*圆形删除按钮---end---*/
+
+
