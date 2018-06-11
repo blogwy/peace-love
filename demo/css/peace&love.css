@@ -517,11 +517,11 @@ body, button, input, select, textarea {
 }
 
 .input[disabled], .textarea[disabled] {
-  background-color: #f5f5f5;
-  border-color: #f5f5f5;
-  box-shadow: none;
-  color: #7a7a7a;
-  cursor: not-allowed;
+  background-color: #f5f5f5!important;
+  border-color: #f5f5f5!important;
+  box-shadow: none!important;
+  color: #7a7a7a!important;
+  cursor: not-allowed!important;
 }
 .icon-input-item,.icon-select-item{
   position: relative;
@@ -732,7 +732,7 @@ body, button, input, select, textarea {
   color: #363636;
 }
 
-.is-primary{
+.button.is-primary{
   background-color: #00d1b2;
   border-color: transparent;
   color: #fff;
@@ -759,7 +759,7 @@ body, button, input, select, textarea {
   color: #fff;
 }
 
-.is-warning{
+.button.is-warning{
   background-color: #ffdb4a;
   border-color: transparent;
   color: #363636;
@@ -786,7 +786,7 @@ body, button, input, select, textarea {
   color: #363636;
 }
 
-.is-success{
+.button.is-success{
   background-color: #23d160;
   border-color: transparent;
   color: #fff;
@@ -813,7 +813,7 @@ body, button, input, select, textarea {
   color: #fff;
 }
 
-.is-danger{
+.button.is-danger{
   background-color: #ff3860;
   border-color: transparent;
   color: #fff;
