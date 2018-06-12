@@ -252,6 +252,189 @@ select 目前有三种样式，分别是大小、颜色、是否有左侧图标�
 
 ![img](http://ww1.sinaimg.cn/large/005LOKa8gy1fs7nzyraizj30b608xmx7.jpg)
 
+## radio
+
+radio(单选框)目前有两种样式，颜色和圆角或直角；
+
+### 颜色
+
+总共有五种颜色，分别是 **#fff(默认)**、**#00d1b2**、**#23d160**、**#ffdd57**、**#ff3860**
+
+#### 类名格式
+
+* **is-primary : #00d1b2**
+
+* **is-success : #23d160**
+
+* **is-warning : #ffdd57**
+
+* **is-danger : #ff3860**
+
+#### Example
+
+```html
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio" name="radio-grounp">
+    <span class="radio-icon-rounded"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio" name="radio-grounp">
+    <span class="radio-icon-rounded"></span>
+  </label>
+</div>
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-primary" name="radio-grounp2">
+    <span class="radio-icon-rounded"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-primary" name="radio-grounp2">
+    <span class="radio-icon-rounded"></span>
+  </label>
+</div>
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-warning" name="radio-grounp3">
+    <span class="radio-icon-rounded"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-warning" name="radio-grounp3">
+    <span class="radio-icon-rounded"></span>
+  </label>
+</div>
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-success" name="radio-grounp4">
+    <span class="radio-icon-rounded"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-success" name="radio-grounp4">
+    <span class="radio-icon-rounded"></span>
+  </label>
+</div>
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-danger" name="radio-grounp5">
+    <span class="radio-icon-rounded"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-danger" name="radio-grounp5">
+    <span class="radio-icon-rounded"></span>
+  </label>
+</div>
+```
+
+![img](http://ww1.sinaimg.cn/large/005LOKa8gy1fs87ghaw23j301s03ca9t.jpg)
+
+### 圆角或直角
+
+#### 类名格式
+
+* **radio-icon-rounded ： 圆角**
+
+* **radio-icon-square ： 直角**
+
+#### Example
+
+```html
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio" name="radio-grounp1">
+    <span class="radio-icon-square"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio" name="radio-grounp1">
+    <span class="radio-icon-square"></span>
+  </label>
+</div>
+
+<div class="mt8">
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-primary" name="radio-grounp2">
+    <span class="radio-icon-rounded"></span>
+  </label>
+  <label class="radio-lab">
+    <input type="radio" class="radio filling-primary" name="radio-grounp2">
+    <span class="radio-icon-rounded"></span>
+  </label>
+</div>
+```
+
+![img](http://ww1.sinaimg.cn/large/005LOKa8gy1fs87g33di8j302901q0mq.jpg)
+
 ## checkbox
 
-## radio
+checkbox(多选框)目前有两种样式，颜色和圆角或直角；
+
+### 颜色
+
+总共有五种颜色，分别是 **#fff(默认)**、**#00d1b2**、**#23d160**、**#ffdd57**、**#ff3860**
+
+#### 类名格式
+
+* **is-primary : #00d1b2**
+
+* **is-success : #23d160**
+
+* **is-warning : #ffdd57**
+
+* **is-danger : #ff3860**
+
+#### Example
+
+```html
+<div class="mt8">
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-success" name="checkbox-grounp1">
+    <span class="checkbox-icon-square"></span>
+  </label>
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-warning" name="checkbox-grounp2">
+    <span class="checkbox-icon-square"></span>
+  </label>
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-danger" name="checkbox-grounp3">
+    <span class="checkbox-icon-square"></span>
+  </label>
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-primary" name="checkbox-grounp4">
+    <span class="checkbox-icon-square"></span>
+  </label>
+</div>
+```
+
+![img](http://ww1.sinaimg.cn/large/005LOKa8gy1fs87ghb7vsj303i01xdfl.jpg)
+
+### 圆角或直角
+
+#### 类名格式
+
+* **checkbox-icon-rounded ： 圆角**
+
+* **checkbox-icon-square ： 直角**
+
+#### Example
+
+```html
+<div class="mt8">
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-success" name="checkbox-grounp1">
+    <span class="checkbox-icon-rounded"></span>
+  </label>
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-warning" name="checkbox-grounp2">
+    <span class="checkbox-icon-square"></span>
+  </label>
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-danger" name="checkbox-grounp3">
+    <span class="checkbox-icon-rounded"></span>
+  </label>
+  <label class="checkbox-lab">
+    <input type="checkbox" class="checkbox filling-primary" name="checkbox-grounp4">
+    <span class="checkbox-icon-square"></span>
+  </label>
+</div>
+```
+
+![img](http://ww1.sinaimg.cn/large/005LOKa8gy1fs87ghb7vsj303i01xdfl.jpg)
