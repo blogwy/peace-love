@@ -285,16 +285,16 @@ body, button, input, select, textarea {
   padding-top: 0px!important;
 }
 .mr0{
-  margin-top: 0px!important;
+  margin-right: 0px!important;
 }
 .pr0{
-  padding-top: 0px!important;
+  padding-right: 0px!important;
 }
 .mb0{
-  margin-top: 0px!important;
+  margin-bottom: 0px!important;
 }
 .pb0{
-  padding-top: 0px!important;
+  padding-bottom: 0px!important;
 }
 
 .ml8{
@@ -310,16 +310,16 @@ body, button, input, select, textarea {
   padding-top: 8px!important;
 }
 .mr8{
-  margin-top: 8px!important;
+  margin-right: 8px!important;
 }
 .pr8{
-  padding-top: 8px!important;
+  padding-right: 8px!important;
 }
 .mb8{
-  margin-top: 8px!important;
+  margin-bottom: 8px!important;
 }
 .pb8{
-  padding-top: 8px!important;
+  padding-bottom: 8px!important;
 }
 
 .ml16{
@@ -335,16 +335,16 @@ body, button, input, select, textarea {
   padding-top: 16px!important;
 }
 .mr16{
-  margin-top: 16px!important;
+  margin-right: 16px!important;
 }
 .pr16{
-  padding-top: 16px!important;
+  padding-right: 16px!important;
 }
 .mb16{
-  margin-top: 16px!important;
+  margin-bottom: 16px!important;
 }
 .pb16{
-  padding-top: 16px!important;
+  padding-bottom: 16px!important;
 }
 
 .ml24{
@@ -360,16 +360,16 @@ body, button, input, select, textarea {
   padding-top: 24px!important;
 }
 .mr24{
-  margin-top: 24px!important;
+  margin-right: 24px!important;
 }
 .pr24{
-  padding-top: 24px!important;
+  padding-right: 24px!important;
 }
 .mb24{
-  margin-top: 24px!important;
+  margin-bottom: 24px!important;
 }
 .pb24{
-  padding-top: 24px!important;
+  padding-bottom: 24px!important;
 }
 
 .ml32{
@@ -385,16 +385,16 @@ body, button, input, select, textarea {
   padding-top: 32px!important;
 }
 .mr32{
-  margin-top: 32px!important;
+  margin-right: 32px!important;
 }
 .pr32{
-  padding-top: 32px!important;
+  padding-right: 32px!important;
 }
 .mb32{
-  margin-top: 32px!important;
+  margin-bottom: 32px!important;
 }
 .pb32{
-  padding-top: 32px!important;
+  padding-bottom: 32px!important;
 }
 
 /* 清除浮动 */
