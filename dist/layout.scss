@@ -1,0 +1,329 @@
+
+/*定义变量*/
+
+$size1: 0px;
+
+$size2: 8px;
+
+$size3: 16px;
+
+$size4: 24px;
+
+$size5: 32px;
+
+
+/*flex布局*/
+.flex{
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.center-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-1{
+  box-sizing: border-box;
+  flex: none;
+  width: 8.33333%;
+}
+.flex-2{
+  box-sizing: border-box;
+  flex: none;
+  width: 16.66667%;
+}
+.flex-3{
+  box-sizing: border-box;
+  flex: none;
+  width: 25%;
+}
+.flex-4{
+  box-sizing: border-box;
+  flex: none;
+  width: 33.33333%;
+}
+.flex-5{
+  box-sizing: border-box;
+  flex: none;
+  width: 41.66667%;
+}
+.flex-6{
+  box-sizing: border-box;
+  flex: none;
+  width: 50%;
+}
+.flex-7{
+  box-sizing: border-box;
+  flex: none;
+  width: 58.33333%;
+}
+.flex-8{
+  box-sizing: border-box;
+  flex: none;
+  width: 66.66667%;
+}
+.flex-9{
+  box-sizing: border-box;
+  flex: none;
+  width: 75%;
+}
+.flex-10{
+  box-sizing: border-box;
+  flex: none;
+  width: 83.33333%;
+}
+.flex-11{
+  box-sizing: border-box;
+  flex: none;
+  width: 91.66667%;
+}
+.flex-12{
+  box-sizing: border-box;
+  flex: none;
+  width: 100%;
+}
+
+.offset-1{
+  margin-left: 8.33333%;
+}
+.offset-2{
+  margin-left: 16.66667%;
+}
+.offset-3{
+  margin-left: 25%;
+}
+.offset-4{
+  margin-left: 33.33333%;
+}
+.offset-5{
+  margin-left: 41.66667%;
+}
+.offset-6{
+  margin-left: 50%;
+}
+.offset-7{
+  margin-left: 58.33333%;
+}
+.offset-8{
+  margin-left: 66.66667%;
+}
+.offset-9{
+  margin-left: 75%;
+}
+.offset-10{
+  margin-left: 83.33333%;
+}
+.offset-11{
+  margin-left: 91.66667%;
+}
+.offset-12{
+  margin-left: 100%;
+}
+
+/* 辅助类 */
+
+/*文本对齐方式*/
+.text-left{
+  text-align: left;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+
+/* 边距 */
+.ml0{
+  margin-left: $size1!important;
+}
+.pl0{
+  padding-left: $size1!important;
+}
+.mt0{
+  margin-top: $size1!important;
+}
+.pt0{
+  padding-top: $size1!important;
+}
+.mr0{
+  margin-right: $size1!important;
+}
+.pr0{
+  padding-right: $size1!important;
+}
+.mb0{
+  margin-bottom: $size1!important;
+}
+.pb0{
+  padding-bottom: $size1!important;
+}
+
+.ml8{
+  margin-left: $size2!important;
+}
+.pl8{
+  padding-left: $size2!important;
+}
+.mt8{
+  margin-top: $size2!important;
+}
+.pt8{
+  padding-top: $size2!important;
+}
+.mr8{
+  margin-right: $size2!important;
+}
+.pr8{
+  padding-right: $size2!important;
+}
+.mb8{
+  margin-bottom: $size2!important;
+}
+.pb8{
+  padding-bottom: $size2!important;
+}
+
+.ml16{
+  margin-left: $size3!important;
+}
+.pl16{
+  padding-left: $size3!important;
+}
+.mt16{
+  margin-top: $size3!important;
+}
+.pt16{
+  padding-top: $size3!important;
+}
+.mr16{
+  margin-right: $size3!important;
+}
+.pr16{
+  padding-right: $size3!important;
+}
+.mb16{
+  margin-bottom: $size3!important;
+}
+.pb16{
+  padding-bottom: $size3!important;
+}
+
+.ml24{
+  margin-left: $size4!important;
+}
+.pl24{
+  padding-left: $size4!important;
+}
+.mt24{
+  margin-top: $size4!important;
+}
+.pt24{
+  padding-top: $size4!important;
+}
+.mr24{
+  margin-right: $size4!important;
+}
+.pr24{
+  padding-right: $size4!important;
+}
+.mb24{
+  margin-bottom: $size4!important;
+}
+.pb24{
+  padding-bottom: $size4!important;
+}
+
+.ml32{
+  margin-left: $size5!important;
+}
+.pl32{
+  padding-left: $size5!important;
+}
+.mt32{
+  margin-top: $size5!important;
+}
+.pt32{
+  padding-top: $size5!important;
+}
+.mr32{
+  margin-right: $size5!important;
+}
+.pr32{
+  padding-right: $size5!important;
+}
+.mb32{
+  margin-bottom: $size5!important;
+}
+.pb32{
+  padding-bottom: $size5!important;
+}
+
+/* 清除浮动 */
+.clearfix:after {
+  content: ' ';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* 快速浮动 */
+.fr {
+  float: right!important;
+}
+
+.fl {
+  float: left!important;
+}
+
+/* 移动端滚动回弹效果 */
+.overtouch {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 文本超出部分显示省略号 */
+/* 一行 */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* 两行 */
+.ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal!important;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+/* 三行 */
+.ellipsis-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal!important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/* IOS 1px问题 */
+.border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 1px solid #DCDCDC;
+  -webkit-box-sizing: border-box;
+  width: 200%;
+  height: 200%;
+  -webkit-transform: scale(.5);
+  -webkit-transform-origin: left top;
+}
+
+/* 辅助类 end */
