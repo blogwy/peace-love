@@ -6,12 +6,11 @@ peace&love.css 由blogwy维护，css及图标文件在dist目录，由于本人�
 
 ## CDN
 
-css文件 [http://7xu2yc.com2.z0.glb.clouddn.com/peace&love.css](http://7xu2yc.com2.z0.glb.clouddn.com/peace&love.css)
+css文件 [右击复制链接](https://wong-1251253615.cos.ap-shanghai.myqcloud.com/peace%26loveV0.1.0.css)
 
-图标文件 [http://7xu2yc.com1.z0.glb.clouddn.com/font-awesome5.0.13.js](http://7xu2yc.com1.z0.glb.clouddn.com/font-awesome5.0.13.js) 
+图标文件 [右击复制链接](https://wong-1251253615.cos.ap-shanghai.myqcloud.com/font-awesome5.0.13.js) 
 
 > 如果使用图标务必引入此js,在这里选择合适的图标 [https://fontawesome.com/icons](https://fontawesome.com/icons)
-
 
 
 ## 文档
